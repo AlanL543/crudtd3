@@ -1,11 +1,79 @@
+{% block _before %}
 <div class="ui page container">
-<div class="ui icon message">
-    <i class="university icon"></i>
-    <div class="content">
-        <div class="header">
-            Conservatoire National des Arts et Métiers
+    <div class="ui {{inverted}} segment">
+        {% endblock %}
+
+        <div class="ui icon message">
+            <i class="university icon"></i>
+            <div class="content">
+                <div class="header">
+                    Université de Caen-Normandie
+                </div>
+                <p>Votre organisation</p>
+            </div>
         </div>
-        <p>Votre organisation</p>
-    </div>
+
+        <div class="ui two columns grid">
+            <div class="one column">
+                <div class="ui segments">
+                    <div class="ui segment">
+                        <i class="users icon"></i>Utilisateurs
+                    </div>
+                    <div class="ui blue segment">
+                        <a class="ui inverted olive button"><i class="add icon"></i>Ajouter un utilisateur</a>
+                    </div>
+                    <div class="ui segment">
+                        <a class="ui inverted olive button"><i class="add icon"></i>Ajouter des utilisateurs</a>
+                    </div>
+                    <div class="ui segment">
+                        <div class="ui labeled button" tabindex="0">
+                            <div class="ui olive button">
+                                <i class="users icon"></i> Gérer les utilisateurs
+                            </div>
+                            <a class="ui basic olive left pointing label">
+                                189
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="second column">
+                <div class="ui segments">
+                    <div class="ui segment">
+                        <i class="people arrows icon"></i>Groupes
+                    </div>
+                    <div class="ui blue segment">
+                        <a class="ui inverted olive button"><i class="add icon"></i>Ajouter un utilisateur</a>
+                    </div>
+                    <div class="ui segment">
+                        <a class="ui olive button"><i class="walking icon"></i>Ajouter des utilisateurs au groupe...</a>
+                    </div>
+
+                    <div class="ui segment">
+                        <div class="ui labeled button" tabindex="0">
+                            <div class="ui olive button">
+                                <i class="users icon"></i> Gérer les utilisateurs
+                            </div>
+                            <a class="ui basic olive left pointing label">
+                                4
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        {% block _after %}
+    </div><h1 class="ui center aligned icon header inverted disabled">
+    <i class="huge circular sticky users icon"></i>
+    Groups
+</h1>
 </div>
-</div>
+{% endblock %}
+{% block script %}
+{% if hasScript %}
+{{script_foot | raw}}
+{% endif %}
+{% endblock %}
